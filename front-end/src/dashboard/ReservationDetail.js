@@ -28,22 +28,18 @@ function ReservationDetail({reservation}) {
         .catch(setError);
     }
 
-    const handleCancelRes = (e) => {
+    const handleCancelReservation = (e) => {
         e.preventDefault();
         setError(null);
-        const confirmBox = window.confirm(
-            "Do you want to cancel this reservation? This cannot be undone."
-        );
-        if (confirmBox === true) {
+        if (window.confirm("Do you want to cancel this reservation? This cannot be undone.")) {
             updateReservationStatus({ status: "cancelled" }, currentReservation.reservation_id)
-            .then((response) => {
-                setCurrentReservation(response);
-                history.go(0);
-            })
+            .then(() => {
+                setCurrentReservation(null);
+                history.go(0)})
             .catch(setError);
         }
     }
-
+    if (currentReservation) {
     return (
         <div className="card text-left card-background">
             <ErrorAlert error={error} />
@@ -71,7 +67,7 @@ function ReservationDetail({reservation}) {
                         EDIT
                     </a>
                     <button data-reservation-id-cancel={currentReservation.reservation_id}
-                            onClick={handleCancelRes}
+                            onClick={handleCancelReservation}
                             className="btn btn-danger btn-sm btn-outline-dark">
                         Cancel Reservation
                     </button>
@@ -79,6 +75,9 @@ function ReservationDetail({reservation}) {
             </div>
         </div>
     )
+    } else {
+        return null;
+    }
 }
 
 export default ReservationDetail;

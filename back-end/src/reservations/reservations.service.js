@@ -50,6 +50,12 @@ function listByPhone(mobile_number) {
     .orderBy("reservation_date");
 }
 
+function destroy(reservation_id) {
+  return knex("reservations")
+    .where({ reservation_id: reservation_id })
+    .del();
+}
+
 module.exports = {
   create,
   read,
@@ -58,4 +64,5 @@ module.exports = {
   list,
   listByDate,
   listByPhone,
+  delete: destroy,
 };

@@ -224,8 +224,9 @@ async function update(req, res) {
 async function updateStatus(req, res) {
   const { status } = req.body.data;
   const { reservationId } = req.params;
+  
   const data = await service.updateStatus(reservationId, status);
-  res.status(200).json({ data });
+  res.status(200).json({ data })
 }
 
 async function list(req, res) {

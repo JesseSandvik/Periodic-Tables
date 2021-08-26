@@ -60,8 +60,7 @@ function Dashboard() {
     e.preventDefault();
     setViewDate(date);
   }
-
-  if (reservations) {
+  
     return (
       <main>
 
@@ -102,13 +101,6 @@ function Dashboard() {
         </div>
       </main>
     ); 
-  } else {
-    return (
-      <div>
-        Loading...
-      </div>
-    )
-  }
 }
 
 export default Dashboard;
