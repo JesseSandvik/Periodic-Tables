@@ -16,8 +16,8 @@ function ReservationDetail({reservation}) {
         }
     }, [currentReservation]);
 
-    const handleSeat = (e) => {
-        e.preventDefault();
+    const handleSeat = (event) => {
+        event.preventDefault();
         setError(null);
         setShowSeat(false);
         updateReservationStatus({ status: "seated" }, currentReservation.reservation_id)
@@ -28,13 +28,13 @@ function ReservationDetail({reservation}) {
         .catch(setError);
     }
 
-    const handleCancelReservation = (e) => {
-        e.preventDefault();
+    const handleCancelReservation = (event) => {
+        event.preventDefault();
         setError(null);
         if (window.confirm("Do you want to cancel this reservation? This cannot be undone.")) {
             updateReservationStatus({ status: "cancelled" }, currentReservation.reservation_id)
-            .then(() => {
-                setCurrentReservation(null);
+            .then((cancelledReservation) => {
+                setCurrentReservation(cancelledReservation);
                 history.go(0)})
             .catch(setError);
         }

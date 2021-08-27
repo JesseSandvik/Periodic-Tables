@@ -64,7 +64,7 @@
   *  a promise that resolves the saved reservation
   */
  export async function createReservation(data, signal) {
-   const url = `${API_BASE_URL}reservations`;
+   const url = `${API_BASE_URL}/reservations`;
    const options = {
      method: "POST",
      headers,
@@ -84,7 +84,7 @@
   *  a promise that resolves the saved reservation
   */
  export async function readReservation(reservationId, signal) {
-   const url = new URL(`${API_BASE_URL}reservations/${reservationId}`);
+   const url = new URL(`${API_BASE_URL}/reservations/${reservationId}`);
    return await fetchJson(url, { headers, signal }, [])
      .then(formatReservationDate)
      .then(formatReservationTime);
@@ -102,7 +102,7 @@
   *  a promise that resolves the saved reservation
   */
  export async function updateReservation(data, reservation_id, signal) {
-   const url = `${API_BASE_URL}reservations/${reservation_id}`;
+   const url = `${API_BASE_URL}/reservations/${reservation_id}`;
    const options = {
      method: "PUT",
      headers,
@@ -124,7 +124,7 @@
   *  a promise that resolves the saved reservation
   */
  export async function updateReservationStatus(data, reservation_id, signal) {
-   const url = `${API_BASE_URL}reservations/${reservation_id}/status`;
+   const url = `${API_BASE_URL}/reservations/${reservation_id}/status`;
    const options = {
      method: "PUT",
      headers,
@@ -140,7 +140,7 @@
   *  a promise that resolves to a possibly empty array of reservation saved in the database.
   */
  export async function listReservations(params, signal) {
-   const url = new URL(`${API_BASE_URL}reservations`);
+   const url = new URL(`${API_BASE_URL}/reservations`);
    Object.entries(params).forEach(([key, value]) =>
      url.searchParams.append(key, value.toString())
    );
@@ -161,7 +161,7 @@
   *  a promise that resolves the saved table
   */
  export async function createTable(data, signal) {
-   const url = `${API_BASE_URL}tables`;
+   const url = `${API_BASE_URL}/tables`;
    const options = {
      method: "POST",
      headers,
@@ -184,7 +184,7 @@
   *  a promise that resolves the saved table
   */
  export async function updateSeatReservation(table_id, reservation_id, signal) {
-   const url = `${API_BASE_URL}tables/${table_id}/seat`;
+   const url = `${API_BASE_URL}/tables/${table_id}/seat`;
    const options = {
      method: "PUT",
      headers,
@@ -202,7 +202,7 @@
   * optional AbortController.signal
   */
  export async function deleteReservationId(table_id, signal) {
-   const url = `${API_BASE_URL}tables/${table_id}/seat`;
+   const url = `${API_BASE_URL}/tables/${table_id}/seat`;
    const options = {
      method: "DELETE",
      headers,
@@ -220,12 +220,12 @@
   *  a promise that resolves to a possibly empty array of tables saved in the database.
   */
  export async function listTables(signal) {
-   const url = new URL(`${API_BASE_URL}tables`);
+   const url = new URL(`${API_BASE_URL}/tables`);
    return await fetchJson(url, { headers, signal }, []);
  }
  
  export async function deleteTable(table_id, signal) {
-   const url = `${API_BASE_URL}tables`;
+   const url = `${API_BASE_URL}/tables`;
    const options = {
      method: "DELETE",
      headers,
