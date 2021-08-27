@@ -33,8 +33,8 @@ function ReservationDetail({reservation}) {
         setError(null);
         if (window.confirm("Do you want to cancel this reservation? This cannot be undone.")) {
             updateReservationStatus({ status: "cancelled" }, currentReservation.reservation_id)
-            .then((cancelledReservation) => {
-                setCurrentReservation(cancelledReservation);
+            .then(() => {
+                setCurrentReservation(null);
                 history.go(0)})
             .catch(setError);
         }
