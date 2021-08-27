@@ -10,6 +10,8 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
 
     return (
         <form className="form-group" onSubmit={handleSubmit} >
+            <div className="form-row">
+                <div className="col">
             <label className="form-label">First Name:</label>
             <br />
                 <input
@@ -27,7 +29,9 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.first_name}
                 className="form-control"
                 />
+                </div>
             <br />
+            <div className="col">
             <label className="form-label">Last Name:</label>
             <br />
                 <input
@@ -45,7 +49,9 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.last_name}
                 className="form-control"
                 />
-            <br />
+                </div>
+                </div>
+                <br />
             <label className="form-label">Mobile Number:</label>
             <br />
                 <input
@@ -64,6 +70,8 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 className="form-control"
                 />
             <br />
+            <div className="form-row">
+                <div className="col">
             <label>Reservation Date:</label>
             <br />
                 <input
@@ -82,6 +90,8 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 className="form-control"
                 />
             <br />
+            </div>
+            <div className="col">
             <label>Reservation Time:</label>
             <br />
                 <input
@@ -99,7 +109,8 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.reservation_time}
                 className="form-control"
                 />
-            <br />
+                </div>
+                </div>
             <label>Amount of People:</label>
             <br />
                 <input
