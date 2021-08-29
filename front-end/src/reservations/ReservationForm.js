@@ -131,8 +131,8 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
             <br />
 
             <div className="d-flex justify-content-around">
-                <button className="btn btn-primary" type="submit">submit</button>
-                <button className="btn btn-danger" onClick={handleCancel}>CANCEL</button>
+                <button className="btn btn-outline-primary" type="submit">Submit</button>
+                <button className="btn btn-outline-danger" onClick={handleCancel}>Cancel</button>
             </div>
         </form>
     )

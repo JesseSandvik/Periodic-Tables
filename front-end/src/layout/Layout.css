@@ -12,10 +12,17 @@ main {
 
 .btn {
   box-shadow: 0 5px 10px #000000;
-  text-shadow: -2px 2px 3px #000000;
 }
+
+.card {
+  background: #001011;
+  border: 3px outset #6CCFF6;
+  box-shadow: 0 5px 10px #000000;
+  color: #98CE00;
+}
+
 .side-bar {
-  background-color: #420C14;
+  background-color: #001011;
   box-shadow: 0 5px 10px #000000;
   min-width: 200px;
   padding: 1rem;
@@ -23,8 +30,10 @@ main {
 }
 
 form {
-  border: .2px solid #420C14;
+  background: #001011;
+  border: 3px outset #6CCFF6;
   box-shadow: 0 5px 10px #000000;
+  color: #98CE00;
   margin: 1rem;
   padding: 1rem;
 }

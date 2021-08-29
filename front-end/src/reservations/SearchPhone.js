@@ -46,7 +46,7 @@ function SearchPhone() {
                         />
                     <br />
                     <div className="d-flex justify-content-center">
-                        <button className="btn btn-primary" type="submit">FIND</button>
+                        <button className="btn btn-outline-info" type="submit">Find Reservation</button>
                     </div>
                 </form>
                 <div>

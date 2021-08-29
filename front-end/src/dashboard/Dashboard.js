@@ -70,7 +70,7 @@ function Dashboard() {
 
         <div className="d-flex mb-3 justify-content-between">
           <button className="btn btn-secondary" onClick={handlePreviousDay}>Previous Day</button>
-          <button className="btn btn-success" onClick={handleTodayDay}>Today</button>
+          <button className="btn btn-outline-info" onClick={handleTodayDay}>Today</button>
           <button className="btn btn-dark" onClick={handleNextDay}>Next Day</button>
         </div>
 
