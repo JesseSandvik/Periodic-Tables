@@ -32,7 +32,7 @@ function NewTable() {
         <div>
             <ErrorAlert error={error} />
 
-            <h3 className="d-flex m-3 justify-content-center">New Table Form</h3>
+            <h3>New Table Form</h3>
 
             <div>
                 <form className="form-group" onSubmit={handleSubmit}>
@@ -59,9 +59,9 @@ function NewTable() {
                         />
                     <br />
 
-                    <div className="d-flex justify-content-around">
-                        <button className="btn btn-outline-primary" type="submit">Submit</button>
-                        <button className="btn btn-outline-danger" onClick={handleCancel}>Cancel</button>
+                    <div>
+                        <button type="submit">Submit</button>
+                        <button onClick={handleCancel}>Cancel</button>
                     </div>
                 </form>
             </div>

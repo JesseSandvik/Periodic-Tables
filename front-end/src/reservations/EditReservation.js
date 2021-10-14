@@ -58,7 +58,7 @@ function EditReservation() {
     return (
         <div>
             <ErrorAlert error={error} />
-            <h3 className="d-flex m-3 justify-content-center">Edit Reservation Form</h3>
+            <h3>Edit Reservation Form</h3>
       
             <div>
                 <ReservationForm

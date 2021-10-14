@@ -53,20 +53,20 @@ function TableDetail( {table} ) {
     }
 
     return (
-        <div className="card text-center card-background">
+        <div>
             <ErrorAlert error={error} />
-            <div className="card-body">
-                <div className="row justify-content-between">
-                <p className="card-text">Table Name: {currentTable.table_name}</p>
-                <p className="card-text">Table Capacity: {currentTable.capacity}</p>
+            <div>
+                <div>
+                <p>Table Name: {currentTable.table_name}</p>
+                <p>Table Capacity: {currentTable.capacity}</p>
                 </div>
-                <p className="card-text" data-table-id-status={`${currentTable.table_id}`}>
+                <p data-table-id-status={`${currentTable.table_id}`}>
                 Occupancy : {tableStatus}
                 </p>   
-                <div className="d-flex justify-content-center">
-                    {tableStatus === "Free" ? (<div></div>) : (<div><button className="btn btn-primary" data-table-id-finish={currentTable.table_id} onClick={handleFinish}>FINISH</button> <button className="btn btn-danger" onClick={handleCancel}>CANCEL</button></div>)} 
+                <div>
+                    {tableStatus === "Free" ? (<div></div>) : (<div><button data-table-id-finish={currentTable.table_id} onClick={handleFinish}>FINISH</button> <button className="btn btn-danger" onClick={handleCancel}>CANCEL</button></div>)} 
                 </div>
-                <button className="btn btn-outline-danger" onClick={handleDelete}>Delete Table</button>
+                <button onClick={handleDelete}>Delete Table</button>
             </div>
         </div>
     )

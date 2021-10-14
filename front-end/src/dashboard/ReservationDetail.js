@@ -41,12 +41,12 @@ function ReservationDetail({reservation}) {
     }
     if (currentReservation) {
     return (
-        <div className="card text-left card-background">
+        <div>
             <ErrorAlert error={error} />
-            <div className="card-body text-center">
-                <div className="row justify-content-between">
-                <h4 className="card-title font-weight-bold">{currentReservation.reservation_time}</h4>
-                <div className="d-flex justify-content-center mb-1">
+            <div>
+                <div>
+                <h4>{currentReservation.reservation_time}</h4>
+                <div>
                     {showSeat ? <a 
                                 href={`/reservations/${currentReservation.reservation_id}/seat`}
                                 onClick={handleSeat}
@@ -55,19 +55,19 @@ function ReservationDetail({reservation}) {
                                 </a> : <div></div>}
                 </div>
                 </div>
-                <p className="card-text">{currentReservation.reservation_date}</p>
-                <p className="card-text">{currentReservation.first_name} {currentReservation.last_name}</p>
-                <p className="card-text">{currentReservation.mobile_number}</p>
-                <p className="card-text">Party Size: {currentReservation.people}</p>
-                <p className="text-center boldtext" data-reservation-id-status={currentReservation.reservation_id}>{currentReservation.status ? currentReservation.status : "booked"}</p>
-                <div className="d-flex justify-content-center btn-group">
+                <p>{currentReservation.reservation_date}</p>
+                <p>{currentReservation.first_name} {currentReservation.last_name}</p>
+                <p>{currentReservation.mobile_number}</p>
+                <p>Party Size: {currentReservation.people}</p>
+                <p data-reservation-id-status={currentReservation.reservation_id}>{currentReservation.status ? currentReservation.status : "booked"}</p>
+                <div>
                     <a      href={`/reservations/${currentReservation.reservation_id}/edit`}
-                            className="btn btn-outline-secondary m-3">
+                            >
                         Edit Reservation
                     </a>
                     <button data-reservation-id-cancel={currentReservation.reservation_id}
                             onClick={handleCancelReservation}
-                            className="btn btn-outline-danger m-3 btn-sm">
+                            >
                         Cancel Reservation
                     </button>
                 </div>

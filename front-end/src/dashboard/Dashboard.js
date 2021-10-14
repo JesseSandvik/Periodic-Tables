@@ -64,36 +64,36 @@ function Dashboard() {
     return (
       <main>
 
-        <div className="d-flex mb-3 justify-content-center">
+        <div>
           <h1>Your Dashboard</h1>
         </div>  
 
-        <div className="d-flex mb-3 justify-content-between">
-          <button className="btn btn-secondary" onClick={handlePreviousDay}>Previous Day</button>
-          <button className="btn btn-outline-info" onClick={handleTodayDay}>Today</button>
-          <button className="btn btn-dark" onClick={handleNextDay}>Next Day</button>
+        <div>
+          <button onClick={handlePreviousDay}>Previous Day</button>
+          <button onClick={handleTodayDay}>Today</button>
+          <button onClick={handleNextDay}>Next Day</button>
         </div>
 
         <ErrorAlert error={error} />
 
-        <div className="container">
-          <div className="d-flex mb-3 justify-content-center">
+        <div>
+          <div>
             <h4>Date: {viewDate}</h4>
           </div>
-          <div className="row">
+          <div>
             {reservations && reservations.map((res) => (
-              <div className="col-md-6 mb-3" key={res.reservation_id}>
+              <div key={res.reservation_id}>
                 <ReservationDetail reservation={res} />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="container">
-          <h3 className="d-flex m-3 justify-content-center">Tables</h3>
-          <div className="row">
+        <div>
+          <h3>Tables</h3>
+          <div>
               {tables && tables.map((table) => (
-                <div className="col-md-6 mb-3" key={table.table_id}>
+                <div key={table.table_id}>
                   <TableDetail table={table} />
                 </div>
               ))}

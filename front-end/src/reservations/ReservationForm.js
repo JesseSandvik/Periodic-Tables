@@ -10,10 +10,7 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
 
     return (
         <form className="form-group" onSubmit={handleSubmit} >
-            <div className="form-row">
-                <div className="col">
             <label className="form-label">First Name:</label>
-            <br />
                 <input
                 name="first_name"
                 type="text"
@@ -29,11 +26,7 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.first_name}
                 className="form-control"
                 />
-                </div>
-            <br />
-            <div className="col">
             <label className="form-label">Last Name:</label>
-            <br />
                 <input
                 name="last_name"
                 type="text"
@@ -49,11 +42,7 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.last_name}
                 className="form-control"
                 />
-                </div>
-                </div>
-                <br />
             <label className="form-label">Mobile Number:</label>
-            <br />
                 <input
                 name="mobile_number"
                 type="text"
@@ -69,11 +58,7 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.mobile_number}
                 className="form-control"
                 />
-            <br />
-            <div className="form-row">
-                <div className="col">
             <label>Reservation Date:</label>
-            <br />
                 <input
                 name="reservation_date"
                 type="date"
@@ -89,11 +74,7 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.reservation_date}
                 className="form-control"
                 />
-            <br />
-            </div>
-            <div className="col">
             <label>Reservation Time:</label>
-            <br />
                 <input
                 name="reservation_time"
                 type="time"
@@ -109,10 +90,7 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.reservation_time}
                 className="form-control"
                 />
-                </div>
-                </div>
             <label>Amount of People:</label>
-            <br />
                 <input
                 name="people"
                 type="number"
@@ -128,12 +106,9 @@ function ReservationForm({ handleSubmit, formData, setFormData }) {
                 value={formData.people}
                 className="form-control"
                 />
-            <br />
 
-            <div className="d-flex justify-content-around">
-                <button className="btn btn-outline-primary" type="submit">Submit</button>
-                <button className="btn btn-outline-danger" onClick={handleCancel}>Cancel</button>
-            </div>
+                <button type="submit">Submit</button>
+                <button onClick={handleCancel}>Cancel</button>
         </form>
     )
 }
