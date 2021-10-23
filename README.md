@@ -1,10 +1,10 @@
 # [Restaurant Reservations Application](https://reservation-app-client.herokuapp.com/dashboard)
 
-Live Project: 
+## Overview
+Periodic Tables is a restaurant reservations & table/seating management application, where the user can track reservations and available tables in a restaurant.
 
-Installation: Fork and clone this repository, cd to the root file, run npm install. You're good to go!
-Front-End: cd into front-end, run npm start to run the front-end in development.
-Back-End: cd into back-end, run npm run start:dev to run the back-end in development.
+## Installation 
+Fork and clone this repository,
 
 This a restaurant reservation application created with the intent to keep user-friendly, organized reservations and table assignments. This was designed with the business perspective in mind, with the ability to create, edit, and cancel reservations, as well as creating and removing tables. Reservations can be assigned to specific tables. Reservations are listed by specified date, defaulting to the current date on the dashboard. There are buttons to toggle the date to view reservations past, present, and future.
 
