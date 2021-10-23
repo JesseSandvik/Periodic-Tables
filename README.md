@@ -3,6 +3,12 @@
 ## Overview
 Periodic Tables is a restaurant reservations & table/seating management application, where the user can track reservations and available tables in a restaurant.
 
+![Periodic Tables Dashboard](https://i.imgur.com/ayDpQp8.png)
+
+![Periodic Tables New Reservation](https://i.imgur.com/qUt639P.png)
+
+![Periodic Tables Search Form](https://i.imgur.com/cY6tPIz.png)
+
 ## Installation
 Fork & clone the repository. |
 ---------------------------- |
@@ -19,6 +25,7 @@ This a restaurant reservation application created with the intent to keep user-f
 Reservations can be assigned to specific tables.
 Reservations are listed by specified date, defaulting to the current date on the dashboard.
 There are buttons to toggle the date to view reservations past, present, and future.
+Reservations can be searched by phone number, previous, current, and future.
 
 ## Build Notes
 This is a full-stack application built using React, JavaScript, HTML, CSS, CSS Bootstrap, Express, Node, Knex, and PostgreSQL. The API was built following RESTful API principles. 
