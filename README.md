@@ -1,6 +1,6 @@
-# Restaurant Reservations Application
+# [Restaurant Reservations Application](https://reservation-app-client.herokuapp.com/dashboard)
 
-Live Project: https://reservation-app-client.herokuapp.com/dashboard
+Live Project: 
 
 Installation: Fork and clone this repository, cd to the root file, run npm install. You're good to go!
 Front-End: cd into front-end, run npm start to run the front-end in development.
