@@ -4,12 +4,26 @@
     header {
         align-items: center;
         justify-content: center;
+        position: relative;
         text-align: center;
-        
+
         nav {
             ul {
                 flex-wrap: wrap;
             }
         }
+    }
+
+    main {
+        padding: 10vh 0 10vh 0;
+    }
+}
+
+@include media-med {
+    header {
+        position: fixed;
+    }
+    main {
+        padding: 33vh 0 10vh 0;
     }
 }

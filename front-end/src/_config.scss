@@ -11,3 +11,9 @@ $accent-color-four: #20BF55;
         @content;
     }
 }
+
+@mixin media-med {
+    @media screen and (min-width: 700px) {
+        @content;
+    }
+}
