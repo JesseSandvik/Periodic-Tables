@@ -1,3 +1,4 @@
+import './Dashboard.css';
 import React, { useEffect, useState } from "react";
 import { listReservations, listTables } from "../utils/api";
 import { previous, next, today } from "../utils/date-time";
@@ -6,7 +7,7 @@ import ErrorAlert from "../layout/ErrorAlert";
 import ReservationDetail from "./ReservationDetail";
 import TableDetail from "./TableDetail";
 
-function Dashboard() {
+export default function Dashboard() {
   const date = today();
 
   const [reservations, setReservations] = useState(null);
@@ -61,46 +62,37 @@ function Dashboard() {
     setViewDate(date);
   }
   
-    return (
-      <main>
-
-        <div>
-          <h1>Your Dashboard</h1>
-        </div>  
-
-        <div>
+  return (
+    <section>
+      <div className="pageTitle">
+        <h1>Dashboard</h1>
+        <div>  
           <button onClick={handlePreviousDay}>Previous Day</button>
           <button onClick={handleTodayDay}>Today</button>
           <button onClick={handleNextDay}>Next Day</button>
         </div>
-
-        <ErrorAlert error={error} />
-
-        <div>
-          <div>
-            <h4>Date: {viewDate}</h4>
-          </div>
-          <div>
-            {reservations && reservations.map((res) => (
-              <div key={res.reservation_id}>
-                <ReservationDetail reservation={res} />
-              </div>
-            ))}
-          </div>
+        <h4>Date: {viewDate}</h4>
+      </div>
+      <ErrorAlert error={error} />
+      {reservations && reservations.map((res) => (
+        <div className="pageBodyOne" key={res.reservation_id}>
+          <ReservationDetail reservation={res} />
         </div>
-
-        <div>
+      ))
+      }
+      <div className="pageBodyTwo">
+        <div className="item title">
           <h3>Tables</h3>
-          <div>
-              {tables && tables.map((table) => (
-                <div key={table.table_id}>
-                  <TableDetail table={table} />
-                </div>
-              ))}
-          </div>
         </div>
-      </main>
-    ); 
-}
-
-export default Dashboard;
+        <div className="item body">
+          {tables && tables.map((table) => (
+            <div key={table.table_id}>
+              <TableDetail table={table} />
+            </div>
+          ))
+          }
+        </div>
+      </div>
+    </section>
+  ); 
+};

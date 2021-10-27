@@ -1,27 +1,23 @@
-import React from "react";
-import Menu from "./Menu";
-import Routes from "./Routes";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
+import Routes from './Routes';
 
-/**
- * Defines the main layout of the application.
- *
- * You will not need to make changes to this file.
- *
- * @returns {JSX.Element}
- */
-function Layout() {
+export default function Layout() {
   return (
-    <div>
-      <div>
-        <div>
-          <Menu />
+    <article>
+      <header>
+        <div className="siteIntro">
+          <Link to="/">
+            <h1>Periodic Tables</h1>
+          </Link>
+          <small>A Restaurant Reservation Management Application</small>
         </div>
-        <div>
-          <Routes />
-        </div>
-      </div>
-    </div>
+        <Navigation />
+      </header>
+      <main>
+        <Routes />
+      </main>
+    </article>
   );
-}
-
-export default Layout;
+};

@@ -1,0 +1,11 @@
+@import './config';
+
+@include media-mob {
+    header {
+        nav {
+            ul {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

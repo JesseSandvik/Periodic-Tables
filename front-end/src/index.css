@@ -1,0 +1,112 @@
+@media screen and (max-width: 700px) {
+  header nav ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+html, body {
+  background-color: #0F0F0F;
+  color: #FF7F11;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: .2rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  -ms-grid-columns: 100vh;
+      grid-template-columns: 100vh;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #FF7F11;
+  border: 5px solid #0F0F0F;
+  border-radius: 5px;
+  color: #0F0F0F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-weight: 700;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+  width: 100vw;
+}
+
+header .siteIntro {
+  font-size: 1.4rem;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: .5rem;
+  text-align: center;
+}
+
+header nav ul li {
+  background: url("./images/orangeLava.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 5px inset #FF7F11;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #0F0F0F;
+          box-shadow: 0 0 10px #0F0F0F;
+  color: #FF7F11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: .3rem;
+  padding: 1rem;
+  text-shadow: -2px 2.5px 0 #0F0F0F;
+  width: 46%;
+}
+
+header nav ul li i {
+  font-size: 3rem;
+}
+
+main {
+  grid-row: 2 / -1;
+  width: 100vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,86 @@
+@import './config';
+@import './responsive';
+
+html, body {
+    background-color: $primary-color;
+    color: $accent-color-one;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .2rem;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+article {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 100vh;
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: $accent-color-one;
+    border: 5px solid $primary-color;
+    border-radius: 5px;
+    color: $primary-color;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 700;
+    grid-row: 1 / 2;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100vw;
+
+    .siteIntro {
+      font-size: 1.4rem;
+    }
+
+    nav {
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: .5rem;
+        text-align: center;
+
+        li {
+          background: url("./images/orangeLava.jpg");
+          background-position: center;
+          background-size: cover;
+          border: 5px inset $accent-color-one;
+          border-radius: 10px;
+          box-shadow: 0 0 10px $primary-color;
+          color: $accent-color-one;
+          display: flex;
+          flex-direction: column;
+          margin: .3rem;
+          padding: 1rem;
+          text-shadow: -2px 2.5px 0 $primary-color;
+          width: 46%;
+
+          i {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    grid-row: 2 / -1;
+    width: 100vw;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }

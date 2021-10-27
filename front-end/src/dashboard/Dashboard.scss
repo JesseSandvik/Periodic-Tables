@@ -1,0 +1,39 @@
+@import '../config';
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1fr auto auto;
+
+    .pageTitle {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+
+    .pageBodyOne {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+
+    .pageBodyTwo {
+        grid-column: 1 / -1;
+        grid-row: 3 / -1;
+
+        .item {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        & .body {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
