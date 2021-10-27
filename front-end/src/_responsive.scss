@@ -2,6 +2,10 @@
 
 @include media-mob {
     header {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
         nav {
             ul {
                 flex-wrap: wrap;

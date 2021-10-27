@@ -1,7 +1,10 @@
 $primary-color: #0F0F0F;
+$secondary-color: #F8F8FF;
 $muted-color: #ABA194;
 $accent-color-one: #FF7F11;
 $accent-color-two: #F26157;
+$accent-color-three: #01BAEF;
+$accent-color-four: #20BF55;
 
 @mixin media-mob {
     @media screen and (max-width: 700px) {

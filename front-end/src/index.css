@@ -1,4 +1,13 @@
 @media screen and (max-width: 700px) {
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
   header nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -31,9 +40,9 @@ article {
 }
 
 header {
-  background-color: #FF7F11;
+  background-color: #20BF55;
   border: 5px solid #0F0F0F;
-  border-radius: 5px;
+  border-radius: 15px;
   color: #0F0F0F;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,14 +80,17 @@ header nav ul {
 }
 
 header nav ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: url("./images/orangeLava.jpg");
   background-position: center;
   background-size: cover;
   border: 5px inset #FF7F11;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px #0F0F0F;
-          box-shadow: 0 0 10px #0F0F0F;
-  color: #FF7F11;
+  -webkit-box-shadow: 0 5px 25px #0F0F0F;
+          box-shadow: 0 5px 25px #0F0F0F;
+  color: #F8F8FF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,10 +98,19 @@ header nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: .3rem;
   padding: 1rem;
   text-shadow: -2px 2.5px 0 #0F0F0F;
+  text-align: center;
   width: 46%;
+}
+
+header nav ul li:hover {
+  border: 5px inset #01BAEF;
+  color: #01BAEF;
 }
 
 header nav ul li i {
