@@ -1,33 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Navigation() {
   return (
     <nav>
         <ul id="accordionSidebar">
           <li>
-            <Link to="/dashboard">
-            <i className="fas fa-table"></i>
+            <NavLink to="/dashboard" activeClassName="activeLink">
+              <i className="fas fa-table"></i>
               <p>&nbsp;Dashboard</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/search">
+            <NavLink to="/search" activeClassName="activeLink">
             <i className="fas fa-search"></i>
               <p>&nbsp;Search</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/reservations/new">
+            <NavLink to="/reservations/new" activeClassName="activeLink">
             <i className="fas fa-glass-cheers"></i>
               <p>&nbsp;New Reservation</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/tables/new">
+            <NavLink to="/tables/new" activeClassName="activeLink">
             <i className="fas fa-chair"></i>
               <p>&nbsp;New Table</p>
-            </Link>
+            </NavLink>
           </li>
         </ul>
     </nav>

@@ -113,6 +113,10 @@ header nav ul li:hover {
   color: #01BAEF;
 }
 
+header nav ul li .activeLink {
+  color: #01BAEF;
+}
+
 header nav ul li i {
   font-size: 3rem;
 }
